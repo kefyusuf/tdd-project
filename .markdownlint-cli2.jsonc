@@ -1,4 +1,9 @@
 {
   "globs": ["**/*.md"],
-  "ignores": ["node_modules/**", ".github/PULL_REQUEST_TEMPLATE.md", ".github/ISSUE_TEMPLATE/*.md"],
+  "ignores": [
+    "**/node_modules/**",
+    "**/.pytest_cache/**",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/*.md",
+  ],
 }

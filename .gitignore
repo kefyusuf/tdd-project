@@ -7,6 +7,14 @@ desktop.ini
 node_modules/
 npm-shrinkwrap.json
 
+# Kata scratch projects: lockfiles stay out (examples track ranges only)
+katas/**/package-lock.json
+
+# Python (kata runs)
+__pycache__/
+.pytest_cache/
+*.pyc
+
 # VitePress site build output and cache
 docs/.vitepress/cache/
 docs/.vitepress/dist/
