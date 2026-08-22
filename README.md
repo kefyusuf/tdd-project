@@ -23,6 +23,16 @@ in real teams.
 
 **Read it online:** <https://kefyusuf.github.io/tdd-project/>
 
+```mermaid
+flowchart LR
+    R["RED<br/>write a failing test"] --> G["GREEN<br/>simplest pass"]
+    G --> F["REFACTOR<br/>clean up"]
+    F -.-> R
+```
+
+The whole discipline in one loop. Start with the
+[runnable String Calculator kata](katas/string-calculator/README.md).
+
 The scope is evidence-driven: chapters map to what software job postings
 actually ask for. See the [Job Market Analysis](docs/05-career/job-market-analysis.md)
 for the documented reasoning.
@@ -80,6 +90,8 @@ for the documented reasoning.
   - [Interview Preparation](docs/05-career/interview-prep.md)
 - **Resources**
   - [Reading List](docs/06-resources/reading-list.md)
+- **Practice**
+  - [String Calculator Kata (runnable starter + solution)](katas/string-calculator/README.md)
 
 ## How the docs are written
 

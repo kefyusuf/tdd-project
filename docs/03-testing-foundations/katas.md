@@ -6,6 +6,7 @@
 - Start with String Calculator; it is the canonical TDD teaching kata.
 - Each kata below lists the specific skill it trains.
 - Do them in a scratch project using the [Vitest](framework-cheatsheets/vitest-jest.md) or [pytest](framework-cheatsheets/pytest.md) cheat sheet.
+- Prefer typing along: a runnable starter + reference solution for String Calculator lives at [katas/string-calculator](https://github.com/kefyusuf/tdd-project/blob/main/katas/string-calculator/README.md).
 
 ## How to practice a kata
 
