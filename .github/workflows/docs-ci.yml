@@ -30,11 +30,13 @@ jobs:
 
       # exercism.org and tidyfirst.substack.com return 403 to CI runners
       # (bot protection); codekata.com times out under load - none are dead.
+      # Generous timeout + retries: agilealliance.org is slow from runners
+      # but alive.
       - name: Check all links in Markdown files
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
-            --no-progress --max-retries 2
+            --no-progress --max-retries 3 --timeout 40
             --exclude 'https://exercism\.org'
             --exclude 'https://tidyfirst\.substack\.com'
             --exclude 'https://codekata\.com'
