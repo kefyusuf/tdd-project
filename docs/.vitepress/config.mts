@@ -8,6 +8,28 @@ export default withMermaid(
     description:
       "A practical, evidence-driven guide to Test-Driven Development, BDD, ATDD, DDD, the testing pyramid, and the engineering culture around them.",
     base: "/tdd-project/",
+    sitemap: {
+      hostname: "https://kefyusuf.github.io/tdd-project/",
+    },
+    head: [
+      ["meta", { property: "og:type", content: "website" }],
+      ["meta", { property: "og:site_name", content: "TDD & Methodologies" }],
+      [
+        "meta",
+        {
+          property: "og:image",
+          content: "https://kefyusuf.github.io/tdd-project/og-cover.png",
+        },
+      ],
+      ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ],
+    transformPageData(pageData) {
+      const canonicalUrl = `https://kefyusuf.github.io/tdd-project/${pageData.relativePath}`
+        .replace(/index\.md$/, "")
+        .replace(/\.md$/, ".html");
+      pageData.frontmatter.head ??= [];
+      pageData.frontmatter.head.push(["link", { rel: "canonical", href: canonicalUrl }]);
+    },
     themeConfig: {
       siteTitle: "TDD & Methodologies",
       nav: [
