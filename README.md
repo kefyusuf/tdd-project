@@ -2,7 +2,7 @@
 
 [![Docs CI](https://github.com/kefyusuf/tdd-project/actions/workflows/docs-ci.yml/badge.svg)](https://github.com/kefyusuf/tdd-project/actions/workflows/docs-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/kefyusuf/tdd-project?style=social&label=Star)](https://github.com/kefyusuf/tdd-project/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/kefyusuf/tdd-project?style=social&label=Star)](https://github.com/kefyusuf/tdd-project)
 [![Release](https://img.shields.io/github/v/release/kefyusuf/tdd-project)](https://github.com/kefyusuf/tdd-project/releases)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
