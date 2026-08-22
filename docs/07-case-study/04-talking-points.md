@@ -1,73 +1,70 @@
-# Case Study - Interview Talking Points
+# Case Study - Interview Notes
 
-## TL;DR
+Rough prep notes for talking about the booking project in interviews.
+Deliberately informal, this is my cheat sheet, not documentation.
 
-- This case study doubles as interview material: a 30-second pitch, a whiteboard flow, and answers to the eight questions you'll actually get.
-- The strength is in trade-offs and incidents, not the happy path.
-- Calibrate honesty: claim exactly what's here - two-person project, small scale, real lessons.
+## The pitch (30 seconds, said out loud once, it sticks)
 
-## The 30-second pitch
+"I built an online booking system for a small chain of physiotherapy clinics
+with one other dev. TypeScript, Postgres, nothing fancy on purpose. The fun
+parts: we made double booking literally impossible with a database exclusion
+constraint instead of reaching for Redis locks, recurring slots had to survive
+DST changes, and we did it test-first where it counted. Wrote up the decisions
+afterwards as ADRs, including the stuff that went wrong."
 
-> "I built an online booking system for a three-location clinic group with one
-> other developer - TypeScript, Postgres, deliberately boring infrastructure.
-> The interesting parts were making double-booking structurally impossible with
-> database exclusion constraints instead of distributed locks, handling
-> DST-correct recurring slots, and running it all test-first where it mattered.
-> I wrote up the decisions and what went wrong as ADRs and a retrospective."
+Then stop talking. Let them pick the thread.
 
-Then let them pick the thread. Every answer below points into this section.
+## Questions I expect, and the short answers
 
-## Questions you should expect
+**How do you stop two people booking the same slot?**
+Postgres exclusion constraint on a tstzrange. The app pre-checks for a nice
+error message but the DB is the bouncer. We tested it by firing 12 parallel
+bookings at one slot, exactly one wins. Considered Redis locks, rejected them:
+extra infra with worse failure modes for our size.
 
-| Likely question                      | Where the material lives                                                                                                                                 |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "How do you prevent double-booking?" | [ADR-002](01-decisions.md) - exclusion constraint vs Redis lock race analysis                                                                            |
-| "Why not microservices?"             | [ADR-001](01-decisions.md) - team-size economics, module boundaries via lint rules                                                                       |
-| "Tell me about a production bug."    | [Retrospective](03-retrospective.md) - silent worker death; note the fix took 2h and the skip cost more                                                  |
-| "How did TDD actually help?"         | [Testing Strategy](02-testing-strategy.md) - policy amendment landed in <1 day, tests first; DST bug caught pre-prod                                     |
-| "Where did you NOT use TDD and why?" | [Testing Strategy](02-testing-strategy.md#what-deliberately-did-not-get-tdd-d) - admin CRUD reasoning (interviewers love this question as a dogma check) |
-| "How did you handle timezones/DST?"  | [ADR-003](01-decisions.md) + expansion-job amendment story                                                                                               |
-| "What would you do differently?"     | [Retrospective](03-retrospective.md#if-we-started-again-tomorrow) - five concrete items, ranked                                                          |
-| "How big was it really?"             | [Overview numbers](00-overview.md) - ~40 appts/day, ~180 unit tests; never inflate                                                                       |
+**Why not microservices?**
+Two part-time devs. Every service is a deploy pipeline and a pager. We did a
+modular monolith with lint rules enforcing module boundaries. Boring and fast.
 
-## Whiteboard-ready: the booking flow
+**A bug that stuck with you?**
+The reminder worker died silently about three weeks in and nothing told us.
+Reception found out because patients complained. The fix was two hours
+(heartbeat + alert). The mistake was deprioritizing monitoring to hit the
+deadline. I'd put it in the definition of done on day one now.
 
-Be able to draw this from memory:
+**Did you really TDD everything?**
+No, and I'd argue that's the point. Domain logic (booking rules, cancellation
+policies, timezone math) was strict red-green-refactor. Admin CRUD screens were
+not, the risk there lives in the queries and those got integration tests.
+Testing form wiring is ritual, not safety.
 
-```text
-Patient picks slot → API validates → INSERT with exclusion constraint
-                                   ├─ ok    → outbox row (same tx) → 200
-                                   └─ conflict → map to "slot taken" → patient refreshes
-Worker loop: poll outbox → send reminder (24h before) → idempotency dedupe → mark sent
-Nightly job: expand recurring availability 14 days ahead (DST-aware)
-```
+**Timezones?**
+Store UTC, convert at the edges, IANA tz per location. The trap was recurring
+slots: "Monday 09:00" is a different UTC instant after DST, so we expand
+recurring slots into concrete ones nightly. Found a DST bug in testing because
+we wrote the failing test first after a near-miss. Never reached patients.
 
-Failure modes worth volunteering before being asked: provider down (outbox
-retries), worker dead (heartbeat alert), concurrent reschedule (constraint
-again).
+**What would you change?**
+Monitoring from day one. Push harder for deposits instead of only tweaking the
+cancellation policy (money talks louder than policy). Test the slot expansion
+on day one, not after the scare. Skip the flexible template abstraction I
+wasted ~4 days on.
 
-## Calibrating the honesty dial
+## If they ask about scale
 
-This section's value is that it documents **real-sized engineering**: small
-numbers, genuine mistakes, no Kubernetes. Presenting it as such reads as
-maturity. Two calibration rules:
+Don't inflate. ~40 appointments a day, three locations, ~180 unit tests. Small
+system, but the concurrency problem is the same one a hospital chain has. If
+pushed past what I tested: "that's beyond where I have evidence, next step
+would be load testing the evening peak." Knowing where your evidence ends is
+part of the answer.
 
-1. **Claim the decisions, not the scale.** "Small system, but the concurrency
-   problem is the same one a hospital chain has" - true, and defensible under
-   follow-ups.
-2. **Own the incidents as yours.** "We skipped monitoring under deadline
-   pressure" lands better than passive voice, and the cost/benefit framing
-   (2-hour fix vs goodwill) shows judgment.
+## Whiteboard from memory
 
-If an interviewer pushes beyond what's documented ("how would this handle 10k
-concurrent users?"), bridge honestly: "That's past where I've tested it - my
-next steps would be load-testing the peak window and revisiting ADR-001's
-extraction seams." That answer demonstrates the exact methodology this repo
-teaches: know your evidence boundary.
+booking flow: pick slot -> insert with exclusion constraint -> ok means outbox
+row in same tx -> worker sends reminder 24h before -> idempotency key dedupes.
+conflict maps to "slot just taken" message.
 
-## Practice routine
+## Before any interview
 
-1. Re-read [decisions](01-decisions.md) until you can state each rejected option _with its rejection reason_ from memory.
-2. Draw the whiteboard flow above cold, twice.
-3. Rehearse the pitch + the two incident stories aloud (5 minutes total).
-4. Skim [Interview Preparation](../05-career/interview-prep.md) for the standard-question layer on top of this project-specific one.
+Re-read the ADRs once. Say the pitch out loud twice. Own the monitoring story
+in first person, it's the best thing in here.

@@ -168,8 +168,8 @@ const POLICIES: Record<string, CancellationPolicy> = {
 ```
 
 **Consequences:** (+) Every policy branch is unit-test-driven; adding a service
-type is a one-line map entry plus tests. (−) Non-developers can't edit policies
-- accepted, because the request never came from non-developers.
+type is a one-line map entry plus tests. (−) Non-developers can't edit policies,
+accepted because the request never came from non-developers.
 **Amendment (month 3):** clinic asked for different lead times per therapist
 seniority, not per service type. The policy-object shape absorbed it cleanly -
 which retroactively justified choosing structure over hardcoding, though we'd

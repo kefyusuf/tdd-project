@@ -15,8 +15,8 @@
 | Integration (real Postgres via Docker) | ~35   | ~45s    | Exclusion constraint races, repository queries, migrations up/down                                                                   |
 | E2E (Playwright)                       | 6     | ~3 min  | The journeys reception cared about: book, reschedule, cancel, double-book rejection, admin schedule edit, reminder visible in outbox |
 
-The shape roughly matches the [Test Pyramid](../03-testing-foundations/test-pyramid.md)
-- not by policy enforcement, but because writing tests below the cost line
+The shape roughly matches the [Test Pyramid](../03-testing-foundations/test-pyramid.md),
+not by policy enforcement but because writing tests below the cost line
 stopped making sense.
 
 ## What got the full red-green-refactor treatment

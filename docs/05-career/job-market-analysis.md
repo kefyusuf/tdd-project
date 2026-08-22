@@ -54,8 +54,8 @@ Jest/Vitest for TS/JS, pytest for Python dominate their ecosystems.
 Weak: "Familiar with TDD concepts."
 Strong: "Practiced test-driven development (red-green-refactor) in production TypeScript services using Vitest; enforced suite time budgets in CI; introduced test-first bug-fixing policy."
 
-The strong version names the practice, the artifact, and the team-level effect
-- exactly the three tiers described in [Skill Levels](../01-tdd/skill-levels.md).
+The strong version names the practice, the artifact, and the team-level effect,
+exactly the three tiers described in [Skill Levels](../01-tdd/skill-levels.md).
 
 ## How to keep this analysis honest
 
