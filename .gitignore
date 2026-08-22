@@ -1,0 +1,17 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node.js (local linting only - this repo ships no runnable code)
+node_modules/
+package-lock.json
+npm-shrinkwrap.json
+
+# Editors
+*.swp
+*.swo
+.idea/
+
+# Logs
+*.log
