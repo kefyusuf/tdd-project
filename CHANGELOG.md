@@ -19,3 +19,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Curated reading list of books, articles, and practice platforms.
 - VitePress documentation site: sidebar navigation, local search, Mermaid diagram rendering.
 - GitHub Actions workflow deploying the site to GitHub Pages on pushes to main.
+- Applied case study: clinic booking system - requirements, five ADRs with rejected alternatives, testing strategy with worked red-green-refactor and concurrency examples, honest retrospective, and interview talking points.

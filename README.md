@@ -57,6 +57,12 @@ for the documented reasoning.
   - [Agile and XP](docs/04-engineering-culture/agile-and-xp.md)
   - [Clean Code and Refactoring](docs/04-engineering-culture/clean-code-refactoring.md)
   - [TDD in CI/CD Pipelines](docs/04-engineering-culture/tdd-in-cicd.md)
+- **Case study - clinic booking system**
+  - [Overview](docs/07-case-study/00-overview.md)
+  - [Architecture Decisions (ADRs)](docs/07-case-study/01-decisions.md)
+  - [Testing Strategy](docs/07-case-study/02-testing-strategy.md)
+  - [Retrospective](docs/07-case-study/03-retrospective.md)
+  - [Interview Talking Points](docs/07-case-study/04-talking-points.md)
 - **Career**
   - [Job Market Analysis](docs/05-career/job-market-analysis.md)
   - [Interview Preparation](docs/05-career/interview-prep.md)

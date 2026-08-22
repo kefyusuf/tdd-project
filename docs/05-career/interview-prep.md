@@ -83,6 +83,15 @@ Their answers tell you whether TDD is practiced or just listed.
 | 11-12 | Review [Job Market Analysis](job-market-analysis.md); tailor resume phrasing |
 | 13-14 | Rest; light review of cheat sheets only                                      |
 
+## Project stories on top of theory
+
+Standard questions get you through the screen; a concrete project story gets
+you the offer. The [clinic booking case study](../07-case-study/00-overview.md)
+provides one end-to-end - pitch, decisions, incidents, and prepared answers in
+the [talking points](../07-case-study/04-talking-points.md). Internalize it or
+replace it with your own project structured the same way: requirements → ADRs →
+testing strategy → retrospective.
+
 ## References
 
 - [Skill Levels](../01-tdd/skill-levels.md) - self-assessment tiers interviewers probe
