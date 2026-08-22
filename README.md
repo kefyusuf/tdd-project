@@ -2,12 +2,24 @@
 
 [![Docs CI](https://github.com/kefyusuf/tdd-project/actions/workflows/docs-ci.yml/badge.svg)](https://github.com/kefyusuf/tdd-project/actions/workflows/docs-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/kefyusuf/tdd-project?style=social&label=Star)](https://github.com/kefyusuf/tdd-project/stargazers)
+[![Release](https://img.shields.io/github/v/release/kefyusuf/tdd-project)](https://github.com/kefyusuf/tdd-project/releases)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 A documentation-first, English-language learning repository about
 **Test-Driven Development (TDD)** and the methodologies that surround it - BDD,
 ATDD, DDD, the testing pyramid, and the engineering culture that makes them work
 in real teams.
+
+## Why this guide?
+
+- **Applied, not theoretical** - every methodology chapter pairs with a full
+  case study: real ADRs with rejected alternatives, an honest retrospective,
+  and interview talking points
+- **Two ecosystems side by side** - TypeScript (Vitest/Jest) and Python (pytest)
+  examples for every concept, plus framework cheat sheets
+- **Evidence-driven scope** - chapters map to documented job-market signals, with
+  a career section for interview preparation
 
 **Read it online:** <https://kefyusuf.github.io/tdd-project/>
 
@@ -23,11 +35,11 @@ for the documented reasoning.
 
 ## Learning paths
 
-| Path               | Recommended order                                                                                                                                                                                                                                                                                   |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Beginner           | [Why Testing Matters](docs/00-getting-started/why-testing-matters.md) → [TDD Fundamentals](docs/01-tdd/fundamentals.md) → [Red, Green, Refactor](docs/01-tdd/red-green-refactor.md) → [Best Practices](docs/01-tdd/best-practices.md) → practice with [Katas](docs/03-testing-foundations/katas.md) |
-| Interview prep     | Core TDD section → [Test Doubles](docs/03-testing-foundations/test-doubles.md) → [Interview Preparation](docs/05-career/interview-prep.md) → katas under time pressure                                                                                                                              |
-| Team lead / senior | [Methodologies Overview](docs/02-methodologies/overview.md) → [Agile and XP](docs/04-engineering-culture/agile-and-xp.md) → [TDD in CI/CD](docs/04-engineering-culture/tdd-in-cicd.md) → [Job Market Analysis](docs/05-career/job-market-analysis.md)                                               |
+| Path               | Time           | Recommended order                                                                                                                                                                                                                                                                                   |
+| ------------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beginner           | ~6h            | [Why Testing Matters](docs/00-getting-started/why-testing-matters.md) → [TDD Fundamentals](docs/01-tdd/fundamentals.md) → [Red, Green, Refactor](docs/01-tdd/red-green-refactor.md) → [Best Practices](docs/01-tdd/best-practices.md) → practice with [Katas](docs/03-testing-foundations/katas.md) |
+| Interview prep     | ~4h + practice | Core TDD section → [Test Doubles](docs/03-testing-foundations/test-doubles.md) → [Interview Preparation](docs/05-career/interview-prep.md) → katas under time pressure                                                                                                                              |
+| Team lead / senior | ~3h            | [Methodologies Overview](docs/02-methodologies/overview.md) → [Agile and XP](docs/04-engineering-culture/agile-and-xp.md) → [TDD in CI/CD](docs/04-engineering-culture/tdd-in-cicd.md) → [Job Market Analysis](docs/05-career/job-market-analysis.md)                                               |
 
 ## Contents
 
