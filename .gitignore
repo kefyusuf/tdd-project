@@ -3,10 +3,13 @@
 Thumbs.db
 desktop.ini
 
-# Node.js (local linting only - this repo ships no runnable code)
+# Node.js dependencies
 node_modules/
-package-lock.json
 npm-shrinkwrap.json
+
+# VitePress site build output and cache
+docs/.vitepress/cache/
+docs/.vitepress/dist/
 
 # Editors
 *.swp

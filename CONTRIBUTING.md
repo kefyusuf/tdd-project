@@ -30,7 +30,8 @@ Additional rules:
 
 ## Local setup
 
-No application code lives here - you only need Node.js 18+ to lint and format.
+No application code lives here - you only need Node.js 18+ to lint, format,
+and preview the documentation site.
 
 ```bash
 npx prettier --write "**/*.md"
@@ -38,6 +39,16 @@ npx markdownlint-cli2 "**/*.md"
 ```
 
 Both commands run automatically in CI on every pull request.
+
+### Documentation site
+
+The site is built with VitePress from the same Markdown files:
+
+```bash
+npm install        # once
+npm run docs:dev   # local dev server with hot reload
+npm run docs:build # production build (must pass before merging site changes)
+```
 
 ## Pull request process
 

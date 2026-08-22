@@ -17,3 +17,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Engineering culture: Agile and XP context, clean code and refactoring, TDD in CI/CD pipelines.
 - Career section: job-market analysis with documented evidence, interview preparation guide.
 - Curated reading list of books, articles, and practice platforms.
+- VitePress documentation site: sidebar navigation, local search, Mermaid diagram rendering.
+- GitHub Actions workflow deploying the site to GitHub Pages on pushes to main.

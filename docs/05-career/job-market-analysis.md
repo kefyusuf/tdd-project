@@ -63,7 +63,7 @@ The strong version names the practice, the artifact, and the team-level effect
 2. Weight _how_ a term appears: "required" beats "nice to have"; seniority modifiers matter.
 3. Prefer primary signals (the ad text) over aggregator summaries.
 
-Improvements welcome via PR - see [CONTRIBUTING](../../CONTRIBUTING.md).
+Improvements welcome via PR - see [CONTRIBUTING](https://github.com/kefyusuf/tdd-project/blob/main/CONTRIBUTING.md).
 
 ## References
 

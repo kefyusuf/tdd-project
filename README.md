@@ -9,6 +9,8 @@ A documentation-first, English-language learning repository about
 ATDD, DDD, the testing pyramid, and the engineering culture that makes them work
 in real teams.
 
+**Read it online:** <https://kefyusuf.github.io/tdd-project/>
+
 The scope is evidence-driven: chapters map to what software job postings
 actually ask for. See the [Job Market Analysis](docs/05-career/job-market-analysis.md)
 for the documented reasoning.
