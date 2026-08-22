@@ -64,5 +64,5 @@ the smaller top and bottom. The takeaway is not "pyramid wrong" - it is
 ## References
 
 - [Martin Fowler - TestPyramid](https://martinfowler.com/bliki/TestPyramid.html)
-- [Kent C. Dodds - The Testing Trophy and Test Classifications](https://kentcdodds.com/blog/the-testing-trophy-and-test-classifications)
+- [Kent C. Dodds - The Testing Trophy and Test Classifications](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications)
 - [Google Testing Blog - Just Say No to More End-to-End Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)

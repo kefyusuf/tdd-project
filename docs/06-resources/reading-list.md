@@ -49,7 +49,7 @@
 - [Martin Fowler et al. - Is TDD Dead?](https://martinfowler.com/articles/is-tdd-dead/) - the 2014 debate series
 - [Dan North - Introducing BDD](https://dannorth.net/introducing-bdd/)
 - [Cucumber - BDD documentation](https://cucumber.io/docs/bdd/) - Discovery/Formulation/Automation
-- [Kent C. Dodds - The Testing Trophy](https://kentcdodds.com/blog/the-testing-trophy-and-test-classifications)
+- [Kent C. Dodds - The Testing Trophy](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications)
 - [Google Testing Blog - Just Say No to More End-to-End Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
 
 ## Official framework documentation
