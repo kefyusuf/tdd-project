@@ -30,7 +30,7 @@ jobs:
 
       # exercism.org and tidyfirst.substack.com return 403 to CI runners
       # (bot protection); codekata.com times out under load; agilealliance.org
-      # rate-limits runner IPs after a few requests - none of these are dead.
+      # rate-limits runner IPs after a few requests. None of these are dead.
       - name: Check all links in Markdown files
         uses: lycheeverse/lychee-action@v2
         with:
