@@ -4,7 +4,7 @@
 
 - Pick a learning path based on your goal: learn, interview, or lead.
 - Every document follows the same anatomy: TL;DR, body, examples, mistakes, references.
-- This repo contains no runnable code - copy snippets into your own scratch project while reading.
+- Start with the [runnable String Calculator kata](https://github.com/kefyusuf/tdd-project/blob/main/katas/string-calculator/README.md); copy other snippets into a scratch project while reading.
 - Practice with katas; reading alone will not build the red-green-refactor reflex.
 
 ## Prerequisites
@@ -15,11 +15,11 @@
 
 ## Learning paths
 
-| Goal                   | Order                                                                                                                             |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Learn TDD from zero    | Why Testing Matters → TDD Fundamentals → Red, Green, Refactor → Best Practices → Common Pitfalls → pick a kata and practice daily |
-| Prepare for interviews | Core TDD section → Test Doubles → framework cheat sheet for your stack → Interview Preparation → timed kata sessions              |
-| Align a team           | Methodologies Overview → Agile and XP → TDD in CI/CD → Job Market Analysis; use the Glossary as shared vocabulary                 |
+| Goal                   | Order                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Learn TDD from zero    | 15 minutes on the String Calculator kata → Why Testing Matters → TDD Fundamentals → Red, Green, Refactor → Best Practices → Common Pitfalls → pick a kata and practice daily |
+| Prepare for interviews | Core TDD section → Test Doubles → framework cheat sheet for your stack → Interview Preparation → timed kata sessions                                                         |
+| Align a team           | Methodologies Overview → Agile and XP → TDD in CI/CD → Job Market Analysis; use the Glossary as shared vocabulary                                                            |
 
 ## Anatomy of every guide
 
@@ -37,8 +37,8 @@ Code examples appear in both ecosystems:
 
 ## How to practice
 
-1. Create a throwaway folder outside this repo (`mkdir tdd-practice && cd tdd-practice`).
-2. Initialize it with your runner ([Vitest cheat sheet](../03-testing-foundations/framework-cheatsheets/vitest-jest.md) or [pytest cheat sheet](../03-testing-foundations/framework-cheatsheets/pytest.md)).
+1. Start with the [String Calculator kata](https://github.com/kefyusuf/tdd-project/blob/main/katas/string-calculator/README.md): it ships a ready-to-run starter, so no setup is needed beyond Node.js or Python.
+2. For other katas, create a throwaway folder outside this repo (`mkdir tdd-practice && cd tdd-practice`) and initialize it with your runner ([Vitest cheat sheet](../03-testing-foundations/framework-cheatsheets/vitest-jest.md) or [pytest cheat sheet](../03-testing-foundations/framework-cheatsheets/pytest.md)).
 3. Follow [Red, Green, Refactor](../01-tdd/red-green-refactor.md) using a kata from the [catalog](../03-testing-foundations/katas.md).
 4. Timebox sessions to 30-45 minutes; stop mid-cycle if needed and note where to resume.
 

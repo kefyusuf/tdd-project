@@ -39,17 +39,18 @@ for the documented reasoning.
 
 ## Who this is for
 
+- Beginners who can write basic TypeScript or Python but have never written a test
 - Developers who want to learn TDD properly, not just the acronym
 - Candidates preparing for testing-focused technical interviews
 - Teams looking for a shared reference to align vocabulary and practices
 
 ## Learning paths
 
-| Path               | Time           | Recommended order                                                                                                                                                                                                                                                                                   |
-| ------------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Beginner           | ~6h            | [Why Testing Matters](docs/00-getting-started/why-testing-matters.md) → [TDD Fundamentals](docs/01-tdd/fundamentals.md) → [Red, Green, Refactor](docs/01-tdd/red-green-refactor.md) → [Best Practices](docs/01-tdd/best-practices.md) → practice with [Katas](docs/03-testing-foundations/katas.md) |
-| Interview prep     | ~4h + practice | Core TDD section → [Test Doubles](docs/03-testing-foundations/test-doubles.md) → [Interview Preparation](docs/05-career/interview-prep.md) → katas under time pressure                                                                                                                              |
-| Team lead / senior | ~3h            | [Methodologies Overview](docs/02-methodologies/overview.md) → [Agile and XP](docs/04-engineering-culture/agile-and-xp.md) → [TDD in CI/CD](docs/04-engineering-culture/tdd-in-cicd.md) → [Job Market Analysis](docs/05-career/job-market-analysis.md)                                               |
+| Path               | Time           | Recommended order                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beginner           | ~6h            | Try the [String Calculator kata](katas/string-calculator/README.md) for 15 minutes → [Why Testing Matters](docs/00-getting-started/why-testing-matters.md) → [TDD Fundamentals](docs/01-tdd/fundamentals.md) → [Red, Green, Refactor](docs/01-tdd/red-green-refactor.md) → [Best Practices](docs/01-tdd/best-practices.md) → practice with [Katas](docs/03-testing-foundations/katas.md) |
+| Interview prep     | ~4h + practice | Core TDD section → [Test Doubles](docs/03-testing-foundations/test-doubles.md) → [Interview Preparation](docs/05-career/interview-prep.md) → katas under time pressure                                                                                                                                                                                                                   |
+| Team lead / senior | ~3h            | [Methodologies Overview](docs/02-methodologies/overview.md) → [Agile and XP](docs/04-engineering-culture/agile-and-xp.md) → [TDD in CI/CD](docs/04-engineering-culture/tdd-in-cicd.md) → [Job Market Analysis](docs/05-career/job-market-analysis.md)                                                                                                                                    |
 
 ## Contents
 
